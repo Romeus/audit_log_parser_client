@@ -22,8 +22,9 @@ To test, we should be able to use a simple netcat session, listening on port 888
 Prerequisites
 
 I tested that project on centos 7.0.
+
 $ uname -r
-3.10.0-514.6.2.el7.x86_64
+> 3.10.0-514.6.2.el7.x86_64
 
 
 Before you compile it you need to install the following libraries:
@@ -35,13 +36,17 @@ $ sudo yum install json-c jsonc-devel json-c-doc audit libcurl-devel
 Installation
 
 Clone that project to a folder, go there and type:
+
 $ make
 
 The build result is a binary executable:
+
 audit_log_parser_client
 
 if you want to rebuild the project you should do:
+
 $ make clean
+
 $ make
 
 ===================================================================
@@ -57,9 +62,11 @@ after the repository was cloned:
 $ chown +x reflect.py
 
 Then you should run it in a first terminal tab:
+
 $ ./reflect.py
 
 In a second tab run the client:
+
 $ sudo ./audit_log_parser_client
 
 Go to the first tab and see all the audit records that were received
