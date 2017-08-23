@@ -31,6 +31,19 @@ Before you compile it you need to install the following libraries:
 
 $ sudo yum install json-c jsonc-devel json-c-doc audit libcurl-devel
 
+If your linux distributive doesn't include libcur and nghttp libraries that support http2 version you should install them from third-party repositories or build it from source.
+
+For example on cent os you should follow those instructions:
+
+http://mor-pah.net/2017/06/21/installing-curl-with-http2-support-on-centos-7-self-contained/
+
+After the libraries is built you should do the following:
+
+$ echo '/usr/local/lib' > /etc/ld.so.conf.d/custom-libs.conf
+
+Then switch to the branch 'custom-lib' of that repository before do the next step.
+
+
 ===================================================================
 
 Installation
