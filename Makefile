@@ -1,4 +1,4 @@
-CFLAGS ?= -lauparse -ljson-c -lcurl
+CFLAGS ?= -I/usr/local/include/curl -lauparse -ljson-c -lcurl
 
 all: audit_log_parser_client
 

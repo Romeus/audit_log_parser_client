@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
 
 	if (curl) {
 		curl_easy_setopt(curl, CURLOPT_URL, CONNECTION_URL);
+		curl_easy_setopt(curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2_0);
 
 		headers = curl_slist_append(headers, "Content-Type: application/json");
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
