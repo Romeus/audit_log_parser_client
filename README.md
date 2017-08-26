@@ -84,3 +84,11 @@ $ sudo ./audit_log_parser_client
 
 Go to the first tab and see all the audit records that were received
 by the server
+
+The program is written in a damon-style. So it's returns to the shell immediately after run.
+If you want to unload the daemon from the memory you should use:
+
+
+$ sudo ./audit_log_parser_client -shutdown
+
+Program guarantees that only one daemon instance could be resident in memory.
